@@ -36,6 +36,7 @@
     transform: rotate(15deg);
     animation-name: anim;
     animation-duration: 2s;
+    animation-timing-function: ease;
     -o-animation-timing-function: ease;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
