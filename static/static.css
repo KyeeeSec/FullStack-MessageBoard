@@ -1,0 +1,118 @@
+#notebtn {
+    border-radius: 10px;
+    border-color: rgb(128, 166, 166);
+    background-color: rgb(156, 177, 201);
+    border: 1px;
+    padding: 5px;
+    font-size: 12px;
+    height: 45px;
+    color: rgb(104, 131, 180);
+}
+#note {
+    border: 1px rgb(99, 121, 142);
+    border-radius: 10px;
+    font-size: smaller;
+    font-weight: 100;
+    width: 150px;
+    height: 35px;
+    padding: 5px;
+    color: rgb(104, 131, 180);
+    background-color: rgb(156, 177, 201);
+}
+.notey {
+    padding: 10px;
+    color: rgb(92, 118, 141);
+    background-color:  rgb(176, 203, 209);
+    box-shadow: 5px 5px 3px rgba(80, 129, 127, 0.3);
+    width: fit-content;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+.stars{
+    position:fixed;
+    width: 150px;
+    padding: 2%;
+    z-index: 100;
+    transform: rotate(15deg);
+    animation-name: anim;
+    animation-duration: 2s;
+    -o-animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(5deg);
+        transform: scale(85%);
+    }
+    100% {
+        transform: rotate(35deg);
+        
+    }
+}
+#note::placeholder {
+    border: 1px rgb(99, 121, 142);
+    border-radius: 10px;
+    font-size: smaller;
+    font-weight: 100;
+    width: 150px;
+    height: 25px;
+    padding: 5px;
+    color: rgb(104, 131, 180);
+    background-color: rgb(156, 177, 201);
+}
+h1{
+    top: -5%;
+    position:fixed;
+    width: fit-content;
+    height: fit-content;
+    font-size: 100px;
+    font-weight:900;
+    color: rgb(106, 135, 168);
+    left:50%;
+    transform: translatex(-50%);
+    font-family: "SuperTrend";
+}
+h1::before{
+    position:fixed;
+    width: fit-content;
+    height: fit-content;
+    z-index: -1;
+    left: 0%;
+    transform: translateX(0.05%);
+    content: "Message Board";
+    color: rgb(55, 56, 80);
+    stroke: rgb(55, 56, 80);
+    stroke-width: 12px;
+}
+#noteslistContainer {
+    position:fixed;
+    width: 90%;
+    top: 20%;
+    left: 50%;
+    transform:translateX(-50%);
+    height: 65%;
+    border: 1px black;
+    z-index: 1;
+    border-radius: 30px;
+    background-color: rgb(161, 188, 195);
+}
+#container {
+    position: fixed;
+    height: fit-content;
+    bottom:0;
+    
+    margin:auto;
+    padding: 20px;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+body{
+    background-color: rgb(175, 203, 210);
+}
+@font-face {
+    font-family: 'SuperTrend';
+    src: url(font.ttf);
+}
