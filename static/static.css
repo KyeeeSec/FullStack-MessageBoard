@@ -21,12 +21,13 @@
 }
 .notey {
     padding: 10px;
-    color: rgb(92, 118, 141);
+    color:  rgb(142, 159, 172);
     background-color:  rgb(176, 203, 209);
-    box-shadow: 5px 5px 3px rgba(80, 129, 127, 0.3);
+    box-shadow: 5px 5px 3px rgba(80, 129, 127, 0.2);
     width: fit-content;
     border-radius: 5px;
     margin-bottom: 8px;
+    font-family: "font2";
 }
 .stars{
     position:fixed;
@@ -98,6 +99,12 @@ h1::before{
     z-index: 1;
     border-radius: 30px;
     background-color: rgb(161, 188, 195);
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+#noteslistContainer::-webkit-scrollbar {
+    display: none;
 }
 #container {
     position: fixed;
@@ -116,4 +123,10 @@ body{
 @font-face {
     font-family: 'SuperTrend';
     src: url(font.ttf);
+    font-weight: 200;
+  
+}
+@font-face {
+    font-family: 'font2';
+    src: url(font2.ttf);
 }

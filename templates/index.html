@@ -15,7 +15,11 @@
            <button id="notebtn">Add note</button>
       </div>
       <div id="noteslistContainer">
-        <ul id="notesList"></ul>
+        <ul id="notesList">
+          {% for note in notes %}
+            <li class="notey">{{ note.text }}</li>
+          {% endfor %}
+        </ul>
       </div>
       <img src="/static/star.svg" class="stars" id="star1">
       <script src="/static/main.js"></script>
