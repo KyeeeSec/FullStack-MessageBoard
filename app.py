@@ -4,8 +4,8 @@ import random
 from supabase import create_client, Client
 from dotenv import load_dotenv
 load_dotenv()
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
+url: str = os.environ.get("SUPABASE_URL") # this needs to be replaced in .env file
+key: str = os.environ.get("SUPABASE_KEY") # this needs to be replaced in .env file
 supabase: Client = create_client(url, key)
 
 app = Flask(__name__)
