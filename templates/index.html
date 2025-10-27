@@ -7,13 +7,14 @@
       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
       <link href="/static/static.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="body">
       
       <h1>Message Board</h1>
       <div id="container">
            <input type="text" id="note" placeholder="Leave a note for Kye">
            <button id="notebtn">Add note</button>
       </div>
+      <button id="btn1">test</button>
       <div id="noteslistContainer">
         <ul id="notesList">
           {% for note in notes %}
@@ -21,7 +22,7 @@
           {% endfor %}
         </ul>
       </div>
-      <img src="/static/star.svg" class="stars" id="star1">
+     
       <script src="/static/main.js"></script>
     </body>
   </html>
