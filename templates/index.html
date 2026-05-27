@@ -14,7 +14,12 @@
            <input type="text" id="note" placeholder="Leave a note for Kye">
            <button id="notebtn">Add note</button>
       </div>
-      <button id="btn1">test</button>
+
+      <div class="Effects">
+        <div id="img"></div>
+        <div id="gradient"></div>
+      </div>
+      
       <div id="noteslistContainer">
         <ul id="notesList">
           {% for note in notes %}
@@ -23,6 +28,27 @@
         </ul>
       </div>
      
-      <script src="/static/main.js"></script>
+      
     </body>
   </html>
+<script src="/static/main.js"></script>
+<script>
+    const container = document.getElementById("noteslistContainer");
+
+    // Scroll to bottom
+    container.scrollTop = container.scrollHeight;
+</script>
+<script>
+    const container = document.getElementById("noteslistContainer");
+    const noteInput = document.getElementById("note");
+    const noteBtn = document.getElementById("notebtn");
+
+    // Auto-scroll on load
+    container.scrollTop = container.scrollHeight;
+
+    noteBtn.addEventListener("click", () => {
+        noteInput.value = "";
+        noteInput.focus();
+        container.scrollTop = container.scrollHeight;
+    });
+</script>

@@ -2,34 +2,11 @@
 DARK/DEFAULT MODE 
 
 */
-#notebtn {
-    border-radius: 10px;
-    border-color: rgb(128, 166, 166);
-  
-    border: 1px;
-    padding: 5px;
-    font-size: 12px;
-    height: 45px;
-    color: rgb(202, 210, 224);
-    background-color: rgb(45, 51, 61);
-}
-#note {
-    border: 1px rgb(99, 121, 142);
-    border-radius: 10px;
-    font-size: smaller;
-    font-weight: 100;
-    width: 150px;
-    height: 35px;
-    padding: 5px;
-    color: rgb(202, 210, 224);
-    background-color: rgb(45, 51, 61);
-}
-#btn2 {
-    background-color: red;
-}
+
+
 .notey {
     padding: 10px;
-    color:  rgb(123, 129, 146); 
+    color:  rgb(94, 98, 109); 
     background-color:  rgb(34, 36, 44);
    
     width: fit-content;
@@ -40,45 +17,23 @@ DARK/DEFAULT MODE
 
 
 
-h1{
-    
-    top: -5%;
-    position:fixed;
-    width: fit-content;
-    height: fit-content;
-    font-size: 80px;
-    font-weight:900;
-    color: rgb(167, 174, 196);
-    left:50%;
-    transform: translatex(-50%);
-    font-family: "font";
-}
-h1::before{
-    position:fixed;
-    width: fit-content;
-    height: fit-content;
-    z-index: -1;
-    left: 0%;
-    transform: translateX(0.05%);
-    content: "Message Board";
-    color: rgb(55, 56, 80);
-    stroke: rgb(55, 56, 80);
-    stroke-width: 12px;
-}
 #noteslistContainer {
     position:fixed;
-    width: 90%;
+    width: 90vw;
     top: 20%;
     left: 50%;
     transform:translateX(-50%);
     height: 65%;
     border: 1px black;
+    
     z-index: 1;
     border-radius: 30px;
-    background-color: rgb(34, 37, 46);
+    background-color: #2a2f3aaa;
+    box-shadow: 2px 4px 8px 2px rgba(21, 22, 24, 0.248);
     overflow-y: auto; 
     scrollbar-width: none; 
     -ms-overflow-style: none; 
+    z-index: 2;
 }
 
 #noteslistContainer::-webkit-scrollbar {
@@ -86,72 +41,158 @@ h1::before{
 }
 #container {
     position: fixed;
-    height: fit-content;
+    height: 2vh;
+    display: flex;
+    flex-wrap: nowrap;
     bottom:0;
-    
+    z-index: 2;
     margin:auto;
-    padding: 20px;
+    padding: auto;
     top: 80%;
+    gap: 25px;
     left: 50%;
     transform: translateX(-50%);
+    -ms-overflow-style: none; 
+    cursor: url("cursor.png")32 32, auto;
+    -moz-user-select: none;
+    user-select: none;
+    
 }
 body{
-    background-color: rgb(23, 25, 31);
+    z-index: 0;
+    background-color: rgb(29, 32, 37);
+     cursor: url("cursor.png")32 32, auto;
 }
+ 
+
+
+  
 
 /*
 LIGHT/NON-DEFAULT MODE
 */
+#gradient{
+    background-image: linear-gradient(40deg, #2a2f3a, #242831);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    -ms-overflow-style: none; 
+    background-size: cover;
+    z-index: 0;
+    cursor: url("cursor.png")32 32, auto;
+}
+#img{
+    background-image: url(asd.png);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 12%;
+    background-size: cover;
+    z-index: 1;
+    -ms-overflow-style: none; 
+    cursor: url("cursor.png")32 32, auto;
+}
 #notebtn {
     border-radius: 10px;
     border-color: rgb(128, 166, 166);
   
     border: 1px;
-    padding: 5px;
+    padding: auto;
+    
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 12px;
-    height: 45px;
-    color: rgb(202, 210, 224);
-    background-color: rgb(45, 51, 61);
+    height: 5vh;
+    color: rgb(118, 124, 134);
+    background-color: #303543bf;
+    z-index: 2;
+    cursor: url("cursor.png")32 32, auto;
+    user-select: none;
+    -moz-user-select: none;
+}
+#notebtn:active{
+    animation-name: glowAnimation;
+    animation-fill-mode: both;
+    animation-duration: 0.2s;
 }
 #note {
-    border: 1px rgb(99, 121, 142);
+    border: #2a2f3abc 2px;
     border-radius: 10px;
     font-size: smaller;
     font-weight: 100;
     width: 150px;
-    height: 35px;
-    padding: 5px;
-    color: rgb(202, 210, 224);
-    background-color: rgb(45, 51, 61);
+    height: 5vh;
+    padding-left: 10px;
+    padding: auto;
+    -webkit-text-fill-color: rgb(118, 124, 134);
+    background-color: #2a2f3abc;
+    z-index: 2;
+    cursor: url("cursor.png")32 32, auto;
+    user-select: none;
+    -moz-user-select: none;
 }
-#btn2 {
-    background-color: red;
+#note:focus {
+    outline: none;
+    box-shadow: 0 0 8px #719ece68;
 }
+
 .notey {
     padding: 10px;
-    color:  rgb(123, 129, 146);
-    background-color:  rgb(34, 36, 44);
-    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.1);
+    color:  rgba(169, 177, 188, 0.886);
+    background-color: #2a2f3a00;
+  
     width: fit-content;
     border-radius: 5px;
     margin-bottom: 8px;
-    font-family: "font2";
+    font-family: 'font2';
+    z-index: 2;
+    cursor: url("cursor.png")32 32, auto;
+    user-select:text;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+.notey::selection {
+    padding: 10px;
+    color:  rgba(76, 93, 117, 0.886);
+    background-color: #2a2f3a00;
+  
+    width: fit-content;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-family: 'font2';
+    z-index: 2;
+    cursor: url("cursor.png")32 32, auto;
+    
+}
+.notey:hover{
+    animation-name: HoverAnimation;
+    animation-fill-mode: both;
+    animation-duration: 0.2s;
 }
 
 
 
 h1{
     
-    top: -5%;
+    top: 0vh;
     position:fixed;
-    width: fit-content;
-    height: fit-content;
-    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    
+    font-size: clamp(3rem, 8vw, 5rem);
     font-weight:900;
-    color: rgb(167, 174, 196);
+    color: #454d5f;
+   
+    opacity: 70%;
     left:50%;
     transform: translatex(-50%);
-    font-family: "font";
+    font-family: "font2";
+    font-weight: 120;
+    z-index: 2;
+    -ms-overflow-style: none; 
+    cursor: url("cursor.png")32 32, auto;
+    user-select: none;
 }
 
 #noteslistContainer2 {
@@ -164,10 +205,12 @@ h1{
     border: 1px black;
     z-index: 1;
     border-radius: 30px;
-    background-color: rgb(34, 37, 46);
+    background-color: #474973;
     overflow-y: auto; 
     scrollbar-width: none; 
     -ms-overflow-style: none; 
+    z-index: 2;
+    cursor: url("cursor.png")32 32, auto;
 }
 
 #noteslistContainer2::-webkit-scrollbar {
@@ -183,15 +226,28 @@ h1{
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
+    cursor: url("cursor.png")32 32, auto;
 }
 #body2{
     background-color: rgb(23, 25, 31);
+    cursor: url("cursor.png")32 32, auto;
 }
 /*
 ANIMATIONS and FONTS
 */
-
-
+.glow {
+    box-shadow: 0 0 8px #719ece68;
+    transition: box-shadow 0.2s ease;
+}
+@keyframes HoverAnimation {
+    0% {background-color: #2a2f3a00;}
+    100% {background-color: #262a35;}
+}
+@keyframes glowAnimation {
+    0% {background-color: #2a2f3a00;}
+    100% {background-color: #272b36d2;outline: none;transform: scale(1.1);}
+}
 @keyframes anim {
     0% {
         transform: rotate(5deg);
@@ -205,7 +261,7 @@ ANIMATIONS and FONTS
 @font-face {
     font-family: 'font';
     src: url(font.ttf);
-    font-weight: 200;
+    font-weight: 150;
   
 }
 @font-face {

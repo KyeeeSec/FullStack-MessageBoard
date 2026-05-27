@@ -12,7 +12,10 @@ app = Flask(__name__)
 @app.route('/')
 def main():
 
-    notes = supabase.table("notes").select("text").execute()
+    notes = supabase.table("notes") \
+    .select("text") \
+    .order("id", desc=False) \
+    .execute()
     print(notes)
     notes = notes.data
     return render_template('index.html', notes=notes)
@@ -21,8 +24,7 @@ def submit_note():
     data = request.get_json()
     note = data.get('note')
     response = supabase.table("notes").insert({
-        "id": random.randint(0, 99999),
-        "text": note
+         "text": note
     }).execute()
     print(response)
 
@@ -31,4 +33,4 @@ def submit_note():
 
 if __name__ == "__main__":
     
-    app.run(host='192.168.0.200', port=5000, debug=True)
+    app.run(host='192.168.0.207', port=5000, debug=True)

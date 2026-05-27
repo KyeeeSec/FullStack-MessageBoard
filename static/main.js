@@ -4,6 +4,10 @@ let button = document.getElementById('notebtn');
 let btn1 = document.getElementById('btn1')
 let body = document.getElementsByClassName('body')
 
+const container = document.getElementById("noteslistContainer");
+const noteInput = document.getElementById("note");
+const noteBtn = document.getElementById("notebtn");
+
 let boolDark = true;
 if (button) {
     let trimmedText = note.value.trim();
@@ -40,3 +44,17 @@ if(btn1) {
         }
         
     })}
+
+
+noteBtn.addEventListener("click", () => {
+        noteInput.value = "";
+        container.scrollTop = container.scrollHeight;
+});
+document.addEventListener("click", (e) => {
+    const input = document.getElementById("note");
+    const button = document.getElementById("notebtn");
+
+    if (e.target !== input && e.target !== button) {
+        input.blur();
+    }
+});
